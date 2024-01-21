@@ -1,0 +1,17 @@
+name: JoinChallenge
+version: '${version}'
+main: prj.salmon.joinchallenge.JoinChallenge
+api-version: '1.20'
+
+commands:
+  challenge:
+    description: コマンドを実行して、テストをクリアしよう！
+
+permissions:
+  joinChallenge.command.*:
+    description: コマンドの動作
+    children:
+      joinChallenge.command.challenge: true
+  joinChallenge.command.challenge:
+    description: /challengeのコマンド権限
+    default: true
